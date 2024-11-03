@@ -5,7 +5,7 @@
 #' the appropriate format for the \code{classifySex} function.
 #'
 #' This function will filter out cells that are unable to be classified due to
-#' zero counts on *XIST/Xist* and all of the Y chromosome genes. If
+#' zero counts on Xist and all of the Y chromosome genes. If
 #' \code{qc=TRUE} additional cells are removed as identified by the
 #' \code{perCellQCMetrics} and \code{quickPerCellQC} functions from the
 #' \code{scuttle} package. The resulting counts matrix is then log-normalised
@@ -18,7 +18,7 @@
 #' @param qc logical, indicates whether to perform additional quality control
 #' on the cells. qc = TRUE will predict cells that pass quality control only
 #' and the filtered cells will not be classified. qc = FALSE will predict
-#' every cell except the cells with zero counts on *XIST/Xist* and the sum
+#' every cell except the cells with zero counts on Xist and the sum
 #' of the Y genes. Default is TRUE.
 #'
 #' @return outputs a list object with the following components
@@ -28,7 +28,7 @@
 #' \item{discarded.cells }{Character vector of cell IDs for the cells that are
 #' discarded when \code{qc=TRUE}.}
 #' \item{zero.cells }{Character vector of cell IDs for the cells that can not
-#' be classified as male/female due to zero counts on *Xist* and all the
+#' be classified as male/female due to zero counts on Xist and all the
 #' Y chromosome genes.}
 #'
 #' @importFrom AnnotationDbi select
@@ -61,13 +61,13 @@
 #' # Preprocess data
 #' pro.data <- preprocess(counts, genome="Hs", qc = TRUE)
 #'
-#' # Look at counts on XIST and superY.all
-#' plot(pro.data$tcm.final$XIST, pro.data$tcm.final$superY)
+#' # Look at counts on Xist and superY.all
+#' plot(pro.data$tcm.final$Xist, pro.data$tcm.final$superY)
 #'
 #' # Cells that are identified as low quality
 #' pro.data$discarded.cells
 #'
-#' # Cells with zero counts on XIST and all Y genes
+#' # Cells with zero counts on Xist and all Y genes
 #' pro.data$zero.cells
 #'
 preprocess<- function(x, genome=genome, qc=qc){
