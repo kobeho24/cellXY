@@ -215,13 +215,13 @@ preprocessDb<- function(x, genome=genome, qc=qc){
   Xgene.set <-Xgenes[Xgenes %in% row.names(x)]
   Ygene.set <-Ygenes[Ygenes %in% row.names(x)]
   cm.new<-as.data.frame(matrix(rep(0, 3*ncol(x)), ncol = ncol(x),nrow = 3))
-  row.names(cm.new) <- c("XIST","superX","superY")
+  row.names(cm.new) <- c("Xist","superX","superY")
   colnames(cm.new) <- colnames(x)
-  if ("XIST" %in% row.names(x)) {
-    cm.new["XIST", ]<- x["XIST", ]
+  if ("Xist" %in% row.names(x)) {
+    cm.new["Xist", ]<- x["Xist", ]
   }else{
 
-    cm.new["XIST", ]<- 0
+    cm.new["Xist", ]<- 0
   }
 
   if (length(Xgene.set)>0){
