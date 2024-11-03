@@ -97,7 +97,7 @@ preprocess<- function(x, genome=genome, qc=qc){
   # genes belonging to the male-specific region of chromosome Y (unique genes)
   # http://bioinf.wehi.edu.au/software/GenderGenes/index.html
   Ygenes<-c("AMELY", "DAZ1", "PRKY", "RBMY1A1", "RBMY1HP", "RPS4Y1", "SRY",
-            "TSPY1", "UTY", "ZFY","KDM5D", "USP9Y", "DDX3Y", "PRY", "XKRY",
+            "TSPY1", "UTY", "ZFY1","KDM5D", "USP9Y", "DDX3Y", "PRY", "XKRY",
             "BPY2", "VCY", "CDY1", "EIF1AY", "TMSB4Y","CDY2A", "NLGN4Y",
             "PCDH11Y", "HSFY1", "TGIF2LY", "TBL1Y", "RPS4Y2", "HSFY2",
             "CDY2B", "TXLNGY","CDY1B", "DAZ3", "DAZ2", "DAZ4")
