@@ -48,7 +48,6 @@ preprocessDb<- function(x, genome=genome, qc=qc){
 
   # genes located in the X chromosome that have been reported to escape
   # X-inactivation
-  # http://bioinf.wehi.edu.au/software/GenderGenes/index.html
   Xgenes<- c("Xist","Eif2s3x","Timm17b","Bcor","Kdm6a",
              "Lancl3","5530601H04Rik","Cybb","Pbdc1","Kdm5c",
              "Jpx","Ddx3x","Ftx","Gm14719","Firre",
@@ -63,7 +62,6 @@ preprocessDb<- function(x, genome=genome, qc=qc){
              "Tmem29","Pdha1","Flna")
 
   # genes belonging to the  chromosome Y (unique genes, mm39)
-  # http://bioinf.wehi.edu.au/software/GenderGenes/index.html
   Ygenes<-c("1700020D14Rik","Gm29089","Zfy1","Uba1y","Gm28588",
             "Gm28587","Kdm5d","Eif2s3y","Gm29650","Tspy-ps",
             "Uty","Ddx3y","Usp9y","Zfy2","H2al2c",
